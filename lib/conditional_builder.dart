@@ -7,6 +7,35 @@ import 'package:flutter/material.dart';
 /// When [condition] is true the [builder] is run. If false
 /// and [fallback] is not null, [fallback] is run. If [fallback] is null and
 /// [condition] is false, an empty [Container] is rendered.
+///
+/// Example:
+///
+/// ```dart
+/// ConditionalBuilder(
+///  condition: true,
+/// builder: (context) {
+///    return Text('This gets rendered');
+///  },
+/// )
+///
+/// ConditionalBuilder(
+///  condition: false,
+///  builder: (context) {
+///    return Text('This does not get rendered, an empty Container will be rendered');
+///  },
+/// )
+///
+/// ConditionalBuilder(
+///  condition: false,
+///  builder: (context) {
+///    return Text('This does not get rendered, as fallback is not null, it is used to render the fallback widget.');
+///  },
+///  fallback: (context) {
+///    return Text('This gets rendered');
+///  }
+/// )
+/// ```
+
 class ConditionalBuilder extends StatelessWidget {
   /// Condition to control what gets rendered.
   final bool condition;
