@@ -1,0 +1,16 @@
+name: conditional_builder
+description: Synchronous conditional widget renderer.
+version: 1.0.0
+author: Frederick Corcino Alejo<frederickcorcino@gmail.com>
+homepage: https://github.com/frederickcxa/conditional_builder
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
