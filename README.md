@@ -1,6 +1,8 @@
 # ConditionalBuilder
 
-Synchronous conditional widget renderer. Lets you declaratively render a widget based on a condition. Using this you can get rid of
+Synchronous conditional widget renderer.
+
+Lets you declaratively render a widget based on a condition, using this you can get rid of
 implicit conditional statements in your code to display/hide a widget.
 
 ## Usage
