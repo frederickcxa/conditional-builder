@@ -44,18 +44,19 @@ class ConditionalBuilder extends StatelessWidget {
   final WidgetBuilder builder;
 
   /// Run if [condition] is false and it is not null.
-  final WidgetBuilder fallback;
+  final WidgetBuilder? fallback;
 
   const ConditionalBuilder({
-    Key key,
-    @required this.condition,
-    @required this.builder,
+    Key? key,
+    required this.condition,
+    required this.builder,
     this.fallback,
-  })  : assert(condition != null),
-        assert(builder != null),
-        super(key: key);
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) =>
-      condition ? builder(context) : fallback != null ? fallback(context) : Container();
+  Widget build(BuildContext context) => condition
+      ? builder(context)
+      : fallback != null
+          ? fallback!(context)
+          : Container();
 }
